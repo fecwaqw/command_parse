@@ -40,7 +40,7 @@ command.exec_command(command.command_parse(input()))
 ```
 
 * 首先需要编写每一个命令的实现
-> > function.py：
+> function.py：
 
 * 然后在主程序中载入这个命令实现
 ```python
