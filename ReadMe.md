@@ -72,7 +72,7 @@
 
 * 使用前先load所有的命令文件  
     > 当前目录：  
-    > ![alt 图片](.\img\command样例目录.png)  
+    > ![alt 图片](https://raw.githubusercontent.com/fecwaqw/command_parse/main/img/command%E6%A0%B7%E4%BE%8B%E7%9B%AE%E5%BD%95.png)  
      ```python
     '''example.py'''
     import command
@@ -89,7 +89,7 @@
 
 * 截取用户命令  
     >  当前目录：  
-    > ![alt 图片](.\img\command样例目录.png) 
+    > ![alt 图片](https://raw.githubusercontent.com/fecwaqw/command_parse/main/img/command%E6%A0%B7%E4%BE%8B%E7%9B%AE%E5%BD%95.png) 
     > 
     ```python
     import command
@@ -101,7 +101,7 @@
 
 * 编写命令
     >  当前目录：  
-    > ![alt 图片](.\img\command样例目录.png) 
+    > ![alt 图片](https://raw.githubusercontent.com/fecwaqw/command_parse/main/img/command%E6%A0%B7%E4%BE%8B%E7%9B%AE%E5%BD%95.png) 
     ```python
     from command import utils
   
