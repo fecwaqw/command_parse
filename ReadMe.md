@@ -15,20 +15,20 @@
 > funtion.py
 ```python
 class Plus(utils.Recipe):
-        def __init__(self):
-            self.name = 'plus'
-            self.option_describe = utils.load({
-                # 标记
-                'run': (int, int),
-                'test': (int, int),
-            })
-    
-        def impl(self, command: utils.Command):
-            option_tmp = command.options.get_option_by_name('run')
-            if option_tmp != None:
-                print(option_tmp.params[0] + option_tmp.params[1])
-            else:
-                raise utils.UserInputError
+    def __init__(self):
+        self.name = 'plus'
+        self.option_describe = utils.load({
+            # 标记
+            'run': (int, int),
+            'test': (int, int),
+        })
+
+    def impl(self, command: utils.Command):
+        option_tmp = command.options.get_option_by_name('run')
+        if option_tmp != None:
+            print(option_tmp.params[0] + option_tmp.params[1])
+        else:
+            raise utils.UserInputError
 ```
 > main.py
 ```python
