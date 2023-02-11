@@ -43,7 +43,7 @@ class Option_list(list):
         self.__had_element[__object.name] = self.__len__()
         super().append(__object)
 
-    def get_object_by_name(self, __name: str):
+    def get_option_by_name(self, __name: str):
         if __name not in self.__had_element:
             return None
         return self[self.__had_element[__name]]
