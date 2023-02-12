@@ -73,5 +73,5 @@ class Recipe(abc.ABC):
         self.name = ''
         self.option_describe = load({})
 
-    def impl(self, command: Command):
+    def impl(self, command):
         ...

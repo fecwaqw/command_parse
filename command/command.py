@@ -15,6 +15,36 @@ command_name1:
 '''
 
 
+def __split(s: str):
+    result = []
+    tmp = ''
+    split_char = ' '  # 分割字符
+    for i in s:
+        if split_char == ' ':
+            if i == ' ':
+                result.append(tmp)
+                tmp = ''
+            elif i == '\'':
+                split_char = '\''
+            elif i == '\"':
+                split_char = '\"'
+            else:
+                tmp += i
+        elif split_char == '\'':
+            if i == '\'':
+                split_char = ' '
+            else:
+                tmp += i
+        elif split_char == '\"':
+            if i == '\"':
+                split_char = ' '
+            else:
+                tmp += i
+    if tmp != '':
+        result.append(tmp)
+    return result
+
+
 def command_parse(user_input: str):
     options = utils.Option_list()
     params = []
@@ -22,7 +52,7 @@ def command_parse(user_input: str):
     param_len = 0
     param_cnt = 0
     param_key = ''
-    input_list = user_input.split()
+    input_list = __split(user_input)
     name = input_list.pop(0)
     if name not in function_map.keys():
         raise utils.UserInputError
@@ -71,3 +101,6 @@ def load_commands(*objs: object):
             for key, value in function.option_describe.items():
                 function_map[function.name]['options'][key] = {}
                 function_map[function.name]['options'][key]['type'] = value
+
+
+print(__split('abc -abc \'a bc\''))
